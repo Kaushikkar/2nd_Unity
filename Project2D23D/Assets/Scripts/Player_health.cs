@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player_health : MonoBehaviour
 {
     Enemy_detection enemy_Detection;
@@ -32,7 +32,9 @@ public class Player_health : MonoBehaviour
         }
          if(current_health==0)
         {
+
             Debug.Log("DEAD");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
